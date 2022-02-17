@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto&display=swap');
+
+@font-face {
+    font-family: 'Georgia Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Regular'), url('./fonts/georgia.woff') format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.p-xy{
+    padding: 57px 13.68% 0;
+}
+
+nav{
+    position: relative;
+    background-color: #0e365a;
+    display: flex;
+}
+
+.dropmenu{
+    position: absolute;
+    background-color: #0e365a;
+    z-index: 100;
+    display: none;
+}
+
+.navigation>li:first-child:hover .dropmenu{
+    display: block;
+}
+
+.dropmenu a{
+    color: #ffffff;
+}
+
+.dropmenu>li{
+    padding: 8px;
+}
+
+.dropmenu>li:hover{
+    background-color: rgb(216, 211, 211);
+}
+
+nav>a{
+    padding: 16px 25px;
+    color: white;
+}
+
+.menu{
+    position: absolute;
+    top: 14px;
+    right: 25px;
+    color: white;
+    display: none;
+}
+
+
+.menu:hover{
+    cursor: pointer;
+}
+
+
+.navigation{
+    display: flex;
+    padding: 16px 25px;
+}
+
+.navigation>li{
+    margin-right: 46px;
+   
+}
+
+.navigation>li>a{
+    color: white;
+}
+
+.card_row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card_row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.card_container{
+    float: left;
+    width: 25%;
+    padding: 0 1.15%;
+}
+
+.card{
+    max-width: 100%;
+    box-shadow: 0 0 10px #f4f4f4;
+}
+
+.card>img{
+    max-width: 100%;
+}
+
+.card_content{
+    padding: 25px 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.card_content>h2{
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+footer{
+    padding: 10px;
+    color: white;
+    background-color: #0e365a;
+}
+
+.articles{
+    background-color: #fafafa;
+    padding: 70px 15%;
+}
+
+article{
+    border: 1px solid #dddddd;
+    padding: 32px 22px;
+    background-color: #ffffff;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+article>h1{
+    font-family: Georgia, serif;
+    font-size: clamp(1.5rem, 2.1vw, 2rem);
+    text-align:  center;
+    margin-bottom: 70px;
+}
+
+article>img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/* Mobile */
+
+@media only screen and (max-width: 768px){
+    .card_container{
+        width: 100%;
+    }
+
+    .navigation{
+        display: none;
+        position: absolute;
+        top: 56px;
+        flex-direction: column;
+        align-items: center;
+        background-color: tomato;
+        width: 100%;
+    }
+    
+
+    .p-xy{
+        padding: 57px 2% 0;
+    }
+
+    .navigation>li{
+        margin-bottom: 10px;
+    }
+
+
+    .menu{
+        display: block;
+    }
+
+    nav{
+        height: 56px;
+        background-color: #0e365a;
+    }
+
+    .articles{
+        background-color: #fafafa;
+        padding: 70px 0;
+    }
+}
+
